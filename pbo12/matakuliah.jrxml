@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="96d5eda7-2658-44a7-a2e4-d26c1205d8ce">
+	<property name="ireport.zoom" value="0.9090909090909091"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM matakuliah;]]>
+	</queryString>
+	<field name="kodemk" class="java.lang.String"/>
+	<field name="sks" class="java.lang.Integer"/>
+	<field name="namamk" class="java.lang.String"/>
+	<field name="semesterajar" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="79" forecolor="#FFFFFF" backcolor="#CC0000" uuid="faee848e-7788-4a1b-b13c-b9cab427f7b3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell Extra Bold" size="40"/>
+				</textElement>
+				<text><![CDATA[MATA KULIAH]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<image>
+				<reportElement x="600" y="-143" width="212" height="124" uuid="25a84378-0e56-477a-86a4-d2cf3752b858"/>
+				<imageExpression><![CDATA["C:\\Users\\HP\\OneDrive\\Documents\\Downloads\\book.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Opaque" x="27" y="0" width="200" height="20" forecolor="#FFFFFF" backcolor="#FF6666" uuid="2707367f-bec0-438e-b4b6-7cc79f1a6ce2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Franklin Gothic Heavy"/>
+				</textElement>
+				<text><![CDATA[KODE MATA KULIAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="227" y="0" width="136" height="20" forecolor="#FFFFFF" backcolor="#FF6666" uuid="ee04c832-3c8d-4ade-9105-9c413b432140"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Franklin Gothic Heavy"/>
+				</textElement>
+				<text><![CDATA[SKS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="363" y="0" width="200" height="20" forecolor="#FFFFFF" backcolor="#FF6666" uuid="340dc6a0-3146-4cfc-9a8a-ba7ee22ff529"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Franklin Gothic Heavy"/>
+				</textElement>
+				<text><![CDATA[NAMA MATAKULIAH]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="563" y="0" width="200" height="20" forecolor="#FFFFFF" backcolor="#FF6666" uuid="064e72ba-eb90-44a7-b924-2b786deeac59"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Franklin Gothic Heavy"/>
+				</textElement>
+				<text><![CDATA[SEMESTER AJAR]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="27" y="0" width="200" height="20" uuid="06e3a41f-2228-4ad2-a566-e112c282743f"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{kodemk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="227" y="0" width="136" height="20" uuid="f71da054-2bfd-4de2-a4d5-ec3271892531"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{sks}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="363" y="0" width="200" height="20" uuid="2db0b8f2-81a3-4acc-b22f-4ca40c9d7dbc"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{namamk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="563" y="0" width="200" height="20" uuid="d472f06f-3aba-4c6a-94a8-f3a8c1348941"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{semesterajar}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="28" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="17" y="10" width="140" height="20" uuid="4d1a6f87-fc9b-49c8-be8a-b8c41a295a6d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
